@@ -7,7 +7,7 @@ import os
 class InferlessPythonModel:
     def initialize(self):
         HF_TOKEN =  os.getenv("HUGGINGFACE_AUTH_TOKEN") # Access Hugging Face token from environment variable
-        self.pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16,token=HF_TOKEN)
+        self.pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-large", torch_dtype=torch.float16,token=HF_TOKEN)
         self.pipe = self.pipe.to("cuda")
         
     def infer(self, inputs):
