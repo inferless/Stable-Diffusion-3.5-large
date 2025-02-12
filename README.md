@@ -1,9 +1,8 @@
-# Tutorial - Deploy Stable-Diffusion-3 using Inferless
-[Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers) sets a new benchmark in AI image generation, delivering unparalleled image quality with enhanced efficiency. Utilizing a sophisticated Multimodal Diffusion Transformer (MMDiT) architecture, it significantly reduces noise and improves clarity.
+# Tutorial - Deploy Stable-Diffusion-3.5-Large using Inferless
+[Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) is an advanced text-to-image generative model developed by Stability AI. With 8 billion parameters, it excels in producing high-quality, detailed images up to 1 megapixel in resolution. The model employs a Multimodal Diffusion Transformer (MMDiT) architecture, integrating three fixed, pretrained text encoders to enhance its understanding of complex prompts. Additionally, it incorporates Query-Key Normalization (QK Normalization) within its transformer blocks to improve training stability and prompt adherence. This design allows for precise and customizable image generation, making it suitable for professional applications.
 
 ## TL;DR:
-- Deployment of stable-diffusion-3-medium-diffusers model using [Diffusers](https://github.com/huggingface/diffusers).
-- You can expect an average latency of `4.4 sec` for generating an image in `28`steps. This setup has an average cold start time of `9.9 sec` *(For benchmark we have used Nvidia A100-80GB GPU)*.
+- Deployment of Stable-Diffusion-3.5-Large model using [Diffusers](https://github.com/huggingface/diffusers).
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
