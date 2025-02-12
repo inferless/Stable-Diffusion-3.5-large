@@ -1,4 +1,4 @@
-# Tutorial - Deploy Stable-Diffusion-3.5-Large using Inferless
+# Deploy Stable-Diffusion-3.5-Large using Inferless
 [Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) is an advanced text-to-image generative model developed by Stability AI. With 8 billion parameters, it excels in producing high-quality, detailed images up to 1 megapixel in resolution. The model employs a Multimodal Diffusion Transformer (MMDiT) architecture, integrating three fixed, pretrained text encoders to enhance its understanding of complex prompts. Additionally, it incorporates Query-Key Normalization (QK Normalization) within its transformer blocks to improve training stability and prompt adherence. This design allows for precise and customizable image generation, making it suitable for professional applications.
 
 ## TL;DR:
