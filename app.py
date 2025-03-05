@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from diffusers import StableDiffusion3Pipeline
 import torch
 from io import BytesIO
@@ -5,8 +8,9 @@ import base64
 
 class InferlessPythonModel:
     def initialize(self):
-        self.pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-large", torch_dtype=torch.float16)
-        self.pipe = self.pipe.to("cuda")
+        model_id = "stabilityai/stable-diffusion-3.5-large"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
+        self.pipe = StableDiffusion3Pipeline.from_pretrained(model_id, torch_dtype=torch.float16).to("cuda")
 
     def infer(self, inputs):
         prompt = inputs["prompt"]
